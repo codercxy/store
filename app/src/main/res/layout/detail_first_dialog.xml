@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    android:gravity="center">
+    <!--<ImageView
+        android:id="@+id/vd_iv"
+        android:scaleType="fitCenter"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />-->
+    <com.jude.rollviewpager.RollPagerView
+
+        android:id="@+id/detail_fr_dialog_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme_primary"
+        app:rollviewpager_hint_alpha="0"
+        app:rollviewpager_hint_color="#000"
+        app:rollviewpager_hint_gravity="center"
+        app:rollviewpager_hint_paddingBottom="6dp"
+        app:rollviewpager_play_delay="3000" />
+
+
+</RelativeLayout>

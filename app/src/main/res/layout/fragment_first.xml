@@ -1,0 +1,340 @@
+<FrameLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="50dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context=".views.fragments.DetailFirstFragment">
+
+
+        <com.jude.rollviewpager.RollPagerView
+            android:id="@+id/roll_view_pager"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:background="@color/theme_primary"
+            app:rollviewpager_hint_alpha="0"
+            app:rollviewpager_hint_color="#000"
+            app:rollviewpager_hint_gravity="center"
+            app:rollviewpager_hint_paddingBottom="6dp"
+            app:rollviewpager_play_delay="3000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/theme_primary"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp">
+            <!--title-->
+            <TextView
+                android:id="@+id/detail_first_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="金陵春·蓝金陵"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <!--disc-->
+            <TextView
+                android:id="@+id/detail_first_subtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:text="金陵春酒"
+                android:textColor="#BFBFBF"
+                android:textSize="16sp" />
+            <!--price-->
+            <TextView
+                android:id="@+id/detail_first_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/rmb_24dp"
+                android:gravity="center_vertical"
+                android:paddingTop="10dp"
+                android:text="80"
+                android:textColor="@color/red"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#f5f5f5" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center_vertical"
+                android:text="请选择"
+                android:textColor="#BFBFBF"
+                />
+            <!--number-->
+            <TextView
+                android:id="@+id/detail_first_choose_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="24dp"
+                android:gravity="center"
+                android:text="数量" />
+            <!--add or minus-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/detail_first_img_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/detail_first_num_left"
+                    android:src="@drawable/ic_remove_grey600_24dp" />
+
+                <TextView
+                    android:id="@+id/detail_first_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/detail_first_num_middle"
+                    android:gravity="center"
+                    android:paddingLeft="7dp"
+                    android:paddingRight="7dp"
+                    android:text="1" />
+
+                <ImageView
+                    android:id="@+id/detail_first_img_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/detail_first_num_right"
+                    android:src="@drawable/ic_add_grey600_24dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="促销"
+                android:paddingLeft="10dp"
+                android:textColor="#BFBFBF"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="满200减100"
+                android:paddingLeft="38dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="小计"
+                android:paddingLeft="10dp"
+                android:textColor="#BFBFBF"/>
+
+            <TextView
+                android:id="@+id/detail_first_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:paddingLeft="38dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="已优惠"
+                android:paddingLeft="10dp"
+                android:textColor="#BFBFBF"/>
+
+            <TextView
+
+                android:id="@+id/detail_first_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:paddingLeft="24dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="22dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="积分收益"
+                android:paddingLeft="10dp"
+                android:textColor="#BFBFBF"/>
+
+            <TextView
+                android:id="@+id/detail_first_benefits"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="100"
+                android:paddingLeft="10dp"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            android:background="#f5f5f5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="基本信息" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/detail_first_num_right" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品编号：" />
+
+                <TextView
+                    android:id="@+id/detail_first_pd_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="118115716" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品名称：" />
+
+                <TextView
+                    android:id="@+id/detail_first_pd_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="金陵春·蓝金陵" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="规格：" />
+
+                <TextView
+                    android:id="@+id/detail_first_pd_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="500mL" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品备注：" />
+
+                <TextView
+                    android:id="@+id/detail_first_pd_note"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="浓香型白酒" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产品类别：" />
+
+                <TextView
+                    android:id="@+id/detail_first_pd_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="金陵春·经典" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+    <include layout="@layout/detail_bottom" />
+</FrameLayout>
